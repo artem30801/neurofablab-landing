@@ -1,68 +1,185 @@
 <head>
-	<title>SkyBox</title>
+    <title>SkyBox</title>
     <link rel="shortcut icon" href="assests/favicon.png" type="image/png">
     <meta charset="utf-8">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
     <nav>
         <div class="nav-wrapper light-blue darken-2">
-            <a href="#" class="brand-logo center">Neurolabs</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <a href="#" class="brand-logo center">NCogno</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">О нас</a></li>
+                <li>
+                    <a href="#">Главная</a>
+                </li>
+                <li>
+                    <a href="#">О нас</a>
+                </li>
             </ul>
-            
+
             <ul id="nav-mobile" class="left hide-on-med-and-down right">
-                <li><a href="#">Мероприятия</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li>
+                    <a href="#">Мероприятия</a>
+                </li>
+                <li>
+                    <a href="#">Контакты</a>
+                </li>
             </ul>
         </div>
-    
+
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">О нас</a></li>
-            <li><a href="#">Мероприятия</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li>
+                <a href="#">Главная</a>
+            </li>
+            <li>
+                <a href="#">О нас</a>
+            </li>
+            <li>
+                <a href="#">Мероприятия</a>
+            </li>
+            <li>
+                <a href="#">Контакты</a>
+            </li>
         </ul>
 
-        </nav>
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col s12 m9 l10">
-                <div id="introduction" class="section scrollspy" style="height: 100%;">
-                    <p>Content </p>
-                </div>
-            
-                <div id="structure" class="section scrollspy" style="height: 100%;">
-                    <p>Content </p>
-                </div>
-            
-                <div id="initialization" class="section scrollspy">
-                    <p>Content </p>
-                </div>
+    </nav>
+
+    <main class="">
+        <div class="col hide-on-small-only m3 l2" style="position: fixed; right: 0%; top: 35%; padding-right: 20px">
+            <ul class="section table-of-contents">
+                <li>
+                    <a href="#introduction">Об NCogno</a>
+                </li>
+                <li>
+                    <a href="#about-1">Почему?</a>
+                </li>
+                <li>
+                    <a href="#initialization">Партнёры</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="row">
+            <div class="col s12">
+                <div id="introduction" class="container section scrollspy fullheight valign-wrapper">
+                    <div class="row">
+                        <div class="col s12 m10 offset-l1">
+                            <div class="card light-blue darken-2">
+                                <div class="card-content white-text">
+                                    <h1 style="margin-top: 0">NCogno lab</h1>
+                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                                        because I require little markup to use effectively.</p>
+                                </div>
+                                <div class="card-action">
+                                    <div class="row no-margin">
+                                        <a href="#about-1" class="light-blue waves-effect waves-light btn right">Подробнее</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="col hide-on-small-only m3 l2">
-                <ul class="section table-of-contents"style="position: fixed;">
-                    <li><a href="#introduction">Introduction</a></li>
-                    <li><a href="#structure">Structure</a></li>
-                    <li><a href="#initialization">Intialization</a></li>
-                </ul>
+                <div class="divider"></div>
+
+                <div id="about-1" class="section scrollspy fullheight">
+                    <p>Content </p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div id="initialization" class="section scrollspy fullheight grey lighten-5">
+                    <div class='container' align="center">
+                        <h3>Наши эксперты:</h3>
+                        <div class="row d-flex" >
+                            <div class="col l4 m8 offset-m2 s12  d-flex">
+                                <div class="card-panel d-flex">
+                                    <h4>Tимур Бергалиев</h4>
+                                    <img src="assests/ешь.jpg" class="responsive-img circle materialboxed">
+                                    <p class="flow-text">Тимур описание </p>
+                                </div>
+                            </div>
+
+                            <div class="col l4 m8 offset-m2 s12 d-flex" >
+                                <div class="card-panel d-flex">
+                                    <h4>Ольга Есенина</h4>
+                                    <img src="assests/ola.jpg" class="responsive-img circle materialboxed">
+                                    <p class="flow-text">Тимур описание </p>
+                                </div>
+                            </div>
+                            
+                            <div class="col l4 m8 offset-m2 s12 d-flex">
+                                <div class="card-panel d-flex">
+                                    <h4>Мария Киселева</h4>
+                                    <img align="right" src="assests/masha.jpg" class="responsive-img circle materialboxed">
+                                    <p class="flow-text">Тимур описание </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+
+    <footer class="page-footer light-blue darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col m6 s12">
+                    <h5 class="white-text">Так кто же мы?</h5>
+                    <p class="grey-text text-lighten-4">Описание описание описание</p>
+                </div>
+                <div class="col m4 offset-m2 s6">
+                    <h5 class="white-text">Контакты и сcылки</h5>
+                    <ul>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Телега</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Конь</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Улица</a>
+                        </li>
+                        <li>
+                            <a class="grey-text text-lighten-3" href="#!">Фонарь аптека</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col m6 s12">
+                        © 2019 Neurolab
+                    </div>
+                    <div class="col m4 offset-m2 s6">
+                        <a class="grey-text text-lighten-4" href="#!">Ещё сcылка</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
