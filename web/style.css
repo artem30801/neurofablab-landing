@@ -25,3 +25,8 @@
 .card-panel.d-flex {
     flex: 1;
 }
+
+.tabs-content.carousel .carousel-item {
+    width: 100%;
+    height: 280px;
+    }
