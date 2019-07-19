@@ -2,6 +2,25 @@
     min-height: 100%;
 }
 
+.side-scroll-nav{
+    margin: 0;
+    position: fixed; 
+    right: 0%; 
+    top: 35%; 
+    padding-right: 20px;
+    mix-blend-mode: normal;
+}
+
+.side-scroll-text1{
+    color: white !important;
+    filter: invert(0) grayscale(1) contrast(9);
+
+}
+
+#intro.active ~ a{
+    color: white  !important;
+}
+
 .table-of-contents a.active {
     border-left: 2px solid#03a9f4 !important;
 }
@@ -26,7 +45,7 @@
     flex: 1;
 }
 
-.tabs-content.carousel .carousel-item {
-    width: 100%;
-    height: 280px;
-    }
+.carousel-adaptive {
+    height: 90%; 
+    margin-top: -20vh;
+}
