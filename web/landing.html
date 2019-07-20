@@ -17,9 +17,9 @@
 
 <body>
     <nav>
-        <div class="nav-wrapper light-blue darken-2">
-            <a href="#" class="brand-logo center">
-                <img align="center" src="assests/logo.png" style="height: 90%;">
+        <div class="nav-wrapper blue darken-4">
+            <a class="brand-logo center">
+                <img align="center" src="assests/logo.png" style="height: 100%; padding: 8px">
             </a>
 
             <a href="#" data-target="mobile-menu" class="sidenav-trigger">
@@ -27,7 +27,7 @@
             </a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li>
-                    <a href="#">Главная</a>
+                    <a href="#introduction">Главная</a>
                 </li>
                 <li>
                     <a href="#">О нас</a>
@@ -36,20 +36,20 @@
 
             <ul id="nav-mobile" class="left hide-on-med-and-down right">
                 <li>
-                    <a href="#">Контакты</a>
+                    <a href="#contacts">Контакты</a>
                 </li>
             </ul>
         </div>
 
         <ul class="sidenav" id="mobile-menu">
             <li>
-                <a href="#">Главная</a>
+                <a href="#introduction">Главная</a>
             </li>
             <li>
                 <a href="#">О нас</a>
             </li>
             <li>
-                <a href="#">Контакты</a>
+                <a href="#contacts">Контакты</a>
             </li>
         </ul>
 
@@ -59,29 +59,33 @@
         <div class="col hide-on-small-only m3 l2 side-scroll-nav hoverable" data-aos="fade-left" data-aos-delay="400">
             <ul class="section table-of-contents">
                 <li>
-                    <a href="#introduction">Интро</a>
+                    <a href="#introduction">Введение</a>
                 </li>
                 <li>
                     <a href="#buiness">Предложения</a>
                 </li>
                 <li>
-                    <a href="#experts">Эксперты</a>
+                    <a href="#partners">Партнёры</a>
+                </li>
+                <li>
+                    <a href="#writeback">Контакты</a>
                 </li>
             </ul>
         </div>
 
-        <div id="introduction" class="section scrollspy no-autoinit fullheight valign-wrapper blue darken-3">
+        <div id="introduction" class="section scrollspy no-autoinit fullheight valign-wrapper blue darken-3 adaptive-img" style="background-image: url(assests/bg-2.jpg); background-attachment: fixed"
+            data-aos="fade">
             <div class="container">
                 <div class="row">
                     <div class="col s12 m10 offset-l1">
-                        <div class="card light-blue darken-2" data-aos="fade-up-right" data-aos-delay="200">
+                        <div class="card blue darken-4" data-aos="fade-up-right" data-aos-delay="200">
                             <div class="card-content white-text">
                                 <h1 style="margin-top: 0">N-Cogno lab</h1>
-                                <p>Сетевая модель лабортаорий по направлению “Нейротехнологии и когнитивные науки”</p>
+                                <p>Сетевая модель лабораторий по направлению “Нейротехнологии и когнитивные науки”</p>
                             </div>
                             <div class="card-action">
                                 <div class="row no-margin">
-                                    <a href="#about-1" class="light-blue lighten-1 waves-effect waves-light btn right">Подробнее</a>
+                                    <a href="#about-1" class="blue darken-1 waves-effect waves-light btn right">Подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -102,8 +106,8 @@
 
                     <div class="row d-flex">
                         <div class="col s12 m5 l5 d-flex">
-                            <div class="card-panel d-flex adaptive-img" style="background-image: url(http://lorempixel.com/1080/720);" data-aos="fade-right"
-                                data-aos-delay="200">
+                            <div class="card-panel d-flex adaptive-img flex-img waves-effect waves-light" style="background-image: url(assests/scholars.jpg);"
+                                data-aos="fade-right" data-aos-delay="200">
 
                             </div>
                         </div>
@@ -111,11 +115,11 @@
                         <div class="col s12 m6 l7 d-flex">
                             <div class="card-panel no-padding d-flex" data-aos="fade">
                                 <div class="collection no-margin">
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="300">Кружок по нейротехнологиям и когнитивным наукам для 8-11 классов</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="400">Проектная деятельность</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="500">Подготовка к Олимпиаде НТИ</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="600">Курсы повышения квалификации</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="700">Наставничество</a>
+                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="300" data-aos-offset="20">Кружок по нейротехнологиям и когнитивным наукам для 8-11 классов</a>
+                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="400" data-aos-offset="20">Проектная деятельность</a>
+                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="500" data-aos-offset="20">Подготовка к Олимпиаде НТИ</a>
+                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="600" data-aos-offset="20">Курсы повышения квалификации</a>
+                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="700" data-aos-offset="20">Наставничество</a>
                                 </div>
                             </div>
                         </div>
@@ -132,8 +136,8 @@
 
                     <div class="row d-flex">
                         <div class="col s12 m5 push-m6 l5 push-l7 d-flex">
-                            <div class="card-panel d-flex adaptive-img" style="background-image: url(http://lorempixel.com/1080/720);" data-aos="fade-left"
-                                data-aos-delay="200">
+                            <div class="card-panel d-flex adaptive-img flex-img waves-effect waves-light" style="background-image: url(assests/students.jpg);"
+                                data-aos="fade-left" data-aos-delay="200">
 
                             </div>
                         </div>
@@ -141,10 +145,10 @@
                         <div class="col s12 m6 pull-m5 l7 pull-l5 d-flex">
                             <div class="card-panel no-padding d-flex" data-aos="fade">
                                 <div class="collection no-margin">
-                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="300">Специализированные курсы</a>
-                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="400">Включение в проектно-исследовательскую деятельность</a>
-                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="500">Работа со школьниками</a>
-                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="600">Прохождение практики</a>
+                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="300" data-aos-offset="20">Специализированные курсы</a>
+                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="400" data-aos-offset="20">Включение в проектно-исследовательскую деятельность</a>
+                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="500" data-aos-offset="20">Работа со школьниками</a>
+                                    <a class="collection-item" data-aos="fade-right" data-aos-delay="600" data-aos-offset="20">Прохождение практики</a>
                                 </div>
                             </div>
                         </div>
@@ -153,35 +157,36 @@
 
 
                 <div class="divider" data-aos="fade"></div>
-                    <div class="section"></div>
-                    <div class="row">
-                        <h4 align="center" data-aos="fade">Центр коллективного пользования</h4>
+                <div class="section"></div>
+                <div class="row">
+                    <h4 align="center" data-aos="fade">Центр коллективного пользования</h4>
+                </div>
+
+                <div class="row d-flex">
+                    <div class="col s12 m5 l5 d-flex">
+                        <div class="card-panel d-flex adaptive-img flex-img waves-effect waves-light" style="background-image: url(http://lorempixel.com/1080/720);"
+                            data-aos="fade-right" data-aos-delay="200">
+
+                        </div>
                     </div>
 
-                    <div class="row d-flex">
-                        <div class="col s12 m5 l5 d-flex">
-                            <div class="card-panel d-flex adaptive-img waves-effect waves-light" style="background-image: url(http://lorempixel.com/1080/720);" data-aos="fade-right"
-                            data-aos-delay="200">
-
-                            </div>
-                        </div>
-
-                        <div class="col s12 m6 l7 d-flex">
-                            <div class="card-panel no-padding d-flex" data-aos="fade">
-                                <div class="collection no-margin">
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="300">Заказ исследований</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="400">Прототипирование в области человеко-машинных интерфейсов</a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="500">Научно-исследовательская деятельность:
-                                        <i>нейростимуляция, нейросенсинг, нейропротезирование, человеко-машинные интерфейсы</i>
-                                    </a>
-                                    <a class="collection-item" data-aos="fade-left" data-aos-delay="600">Cпециализированное оборудование</a>
-                                </div>
+                    <div class="col s12 m6 l7 d-flex">
+                        <div class="card-panel no-padding d-flex" data-aos="fade">
+                            <div class="collection no-margin">
+                                <a class="collection-item" data-aos="fade-left" data-aos-delay="300" data-aos-offset="20">Заказ исследований</a>
+                                <a class="collection-item" data-aos="fade-left" data-aos-delay="400" data-aos-offset="20">Прототипирование в области человеко-машинных интерфейсов</a>
+                                <a class="collection-item" data-aos="fade-left" data-aos-delay="500" data-aos-offset="20">
+                                    Научно-исследовательская деятельность:
+                                    нейростимуляция, нейросенсинг, нейропротезирование, человеко-машинные интерфейсы
+                                </a>
+                                <a class="collection-item" data-aos="fade-left" data-aos-delay="600" data-aos-offset="20">Cпециализированное оборудование</a>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
         </div>
 
         <div class="divider"></div>
@@ -190,35 +195,109 @@
             <div class='container' align="center">
                 <h3>Наши партнёры:</h3>
                 <div class="row d-flex">
-                    <div class="col l4 m8 offset-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="200">
-                        <div class="card-panel d-flex">
-                            <h4>МГГПУ</h4>
-                            <img src="assests/mgppu.jpg" class="responsive-img circle materialboxed">
-                            <p class="flow-text"><a href='https://mgppu.ru/'> Московский государственный психолого-педагогический университет </a> </p>
-                        </div>
-                    </div>
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="200">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <br>
+                                <br>
+                                <img src="assests/mgppu.jpg">
+                            </div>
 
-                    <div class="col l4 m8 offset-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="400">
-                        <div class="card-panel d-flex">
-                            <h4>МФТИ</h4>
-                            <img src="assests/mfti.png" class="responsive-img circle materialboxed">
-                            <p class="flow-text"><a href='https://mipt.ru/'> Московский физико-технический институт </a></p>
-                        </div>
-                    </div>
-
-                    <div class="col l4 m8 offset-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="600" data-aos-duration="1000">
-                        <div class="card-panel d-flex">
-                            <h4>BiTronicsLab</h4>
-                            <img src="assests/tron.jpg" class="responsive-img circle materialboxed">
-                            <p class="flow-text"><a href="http://www.bitronicslab.com/"> BiTronicLab </a></p>
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='https://mgppu.ru/'>МГППУ</a>
+                                </span>
+                                <p>Московский государственный психолого-педагогический университет</p>
+                            </div>
                         </div>
 
                     </div>
-                    <div class="col l4 m8 offset-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="800" data-aos-duration="1000">
-                        <div class="card-panel d-flex">
-                            <h4>Новосибирский Нейронет-Центр</h4>
-                            <img src="assests/чня.jpg" class="responsive-img circle materialboxed">
-                            <p class="flow-text"><a href=''> Новосибирский Нейронет-Центр </a> </p>
+
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="400">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <img src="assests/mfti.png">
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='https://mipt.ru/'>МФТИ</a>
+                                </span>
+                                <p>Московский физико-технический институт</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="600">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <img src="assests/tron.png" style="padding: 24px;">
+                                <br>
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='http://www.bitronicslab.com/'>BiTronics Lab</a>
+                                </span>
+                                <p>Цифровая лаборатория в области нейротехнологий для школьников и студентов</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="800">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <img src="assests/neurocenter.png" style="padding: 24px;">
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='http://neuronsk.tilda.ws/'>Нейронет</a>
+                                </span>
+                                <p>Новосибирский Нейронет-Центр</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="1000">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <br>
+                                <br>
+                                <img src="assests/nsu.png" style="padding: 24px;">
+                                <br>
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='https://www.nsu.ru/n/'>НГУ</a>
+                                </span>
+                                <p>Новосибирский государственный университет</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l4 m8 push-m2 s12 d-flex" data-aos="fade-in" data-aos-delay="1200">
+                        <div class="card d-flex">
+                            <div class="card-image waves-effect">
+                                <br>
+                                <br>
+                                <img src="assests/kd.png" style="padding: 24px;">
+                                <br>
+                            </div>
+
+                            <div class="card-content">
+                                <span class="card-title">
+                                    <a href='https://kruzhok.org/'>Кружковое движение</a>
+                                </span>
+                                <p>Всероссийское сообщество энтузиастов технического творчества, построенное на принципе горизонтальных
+                                    связей людей, идей и ресурсов.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,7 +323,7 @@
                             </div>
 
                             <div class="col s6 offset-s3 m6 offset-m3 l4 center-align">
-                                <button class="btn waves-effect waves-light light-blue btn-large" type="submit" name="action">
+                                <button class="btn waves-effect waves-light blue darken-1 btn-large" type="submit" name="action">
                                     Отправить
                                     <i class="material-icons right">send</i>
                                 </button>
@@ -258,7 +337,7 @@
 
 
     </main>
-    <footer class="page-footer light-blue darken-1">
+    <footer id="contacts" class="page-footer blue darken-4 scrollspy no-autoinit">
         <div class="container">
             <div class="row">
                 <div class="col m6 s12">
@@ -303,7 +382,7 @@
                         © 2019 N-Cogno lab
                     </div>
                     <div class="col m4 offset-m2 s6">
-                        <a class="grey-text text-lighten-4" href="#!">Ещё сcылка</a>
+                        <a class="grey-text text-lighten-4" href="#!"></a>
                     </div>
                 </div>
             </div>

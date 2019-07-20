@@ -21,9 +21,11 @@
 }
 
 .adaptive-img {
-    background-color: transparent; 
     background-size: cover; 
     background-position: center;
+}
+
+.flex-img {
     min-height: 10em;
 }
 
@@ -42,6 +44,9 @@
     flex: 1;
 }
 
+.card.d-flex {
+    flex: 1;
+}
 .collection.d-flex {
     flex: 1;
 }
@@ -59,27 +64,31 @@
     padding: 16px;
 }
 
+.a {
+    color: #1E88E5;
+}
+
 
 .table-of-contents a.active {
-    border-left: 3px solid#03a9f4 !important;
+    border-left: 3px solid#1E88E5 !important;
 }
 .table-of-contents a:hover {
-    border-left: 1px solid#03a9f4 !important;
+    border-left: 1px solid#1E88E5 !important;
 }
 
 .input-field input:focus {
-    border-bottom: 1px solid #03a9f4 !important;
-    box-shadow: 0 1px 0 0 #03a9f4 !important;
+    border-bottom: 1px solid #1E88E5 !important;
+    box-shadow: 0 1px 0 0 #1E88E5 !important;
 }
 
 .input-field input:focus + label {
-    color: #03a9f4 !important;
+    color: #1E88E5 !important;
 }
 
 .input-field .prefix.active {
-    color: #03a9f4 !important;
+    color: #1E88E5 !important;
   }
 
-  .collection a.collection-item{
-    color: #03a9f4 !important;
-  }
+.collection a.collection-item{
+    color: #1E88E5 !important;
+}
