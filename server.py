@@ -26,8 +26,8 @@ async def reader_page(request):
 
 @app.route("/writeback", methods=["POST", ])
 async def writeback(request):
-    print(request.body, request.body.get("name"))
-    print(request.body, request.body.get("phone"))
+    print(request.body)
+    print(request.args.get("name"), request.args.get("phone"))
 
 
     return response.json({'result': 'Hello world!'})
