@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body id="app">
     <nav>
         <div class="nav-wrapper blue darken-4">
             <a class="brand-logo center">
@@ -365,20 +365,20 @@
                             <div class="row">
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required>
+                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required ref="icon_prefix" @change="validate">
                                     <label for="icon_prefix">Ваше имя</label>
                                 </div>
 
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
                                     <i class="material-icons prefix">phone</i>
                                     <input id="icon_telephone" type="tel" class="validate" pattern="[+]{1,1}[7]{1,1}[0-9]{10,10}" placeholder="+7XXXXXXXXXX"
-                                        name='tel' required>
+                                        name='tel' required ref="icon_telephone" @change="validate">
                                     <label for="icon_telephone">Ваш телефон</label>
                                     <span class="helper-text" data-error="Формат : +7XXXXXXXXXX"></span>
                                 </div>
 
                                 <div class="col s8 offset-s2 m6 offset-m3 l4 center-align">
-                                    <button class="btn waves-effect waves-light light-blue btn-large" id='send_btn' name="action" v-bind:class="{ disabled: send_blocked }">
+                                    <button class="btn waves-effect waves-light light-blue btn-large" id='send_btn' name="action"> <!-- v-bind:class="{ disabled: !valid }" :disabled="!valid" -->
                                         Отправить
                                         <i class="material-icons right">send</i>
                                     </button>
@@ -464,17 +464,29 @@
 
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script>
-        var app = new Vue({
-            el: '#send_btn',
+        var vm = new Vue({
             data: {
                 blocked: false,
+                telephone: null,
+                valid: false
             },
-            computed: {
-                send_blocked: function () {
-                    return this.blocked
+            computed: {},
+            methods: {
+                validate: () => {
+                    var elem1 = document.getElementById('icon_prefix')
+                    var elem2 = document.getElementById('icon_telephone')
+                    console.log(elem1.classList)
+                    console.log(elem1.classList.contains('valid'))
+                    if (elem1.classList.contains('valid')) {
+                        this.valid = false
+                    } else {
+                        this.valid = true
+                    }
+                    //console.log(this.valid)
                 }
             }
         })
+        vm.$mount('#writeback')
     </script>
 
 </body>
