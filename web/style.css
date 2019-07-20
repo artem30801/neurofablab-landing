@@ -5,9 +5,9 @@
 .side-scroll-nav{
     margin: 0;
     position: fixed; 
-    right: 0%; 
-    top: 35%; 
-    padding-right: 16px;
+    padding-right: 8px;
+    right: 0%;
+    top: 35%;
     background-color: white;
     border-radius: 10px 0px 0px 10px;
 }
@@ -93,6 +93,6 @@
     color: #1E88E5 !important;
 }
 
-body, html {
-    overflow-x:hidden; 
+main {
+    overflow-x: hidden; 
 }
