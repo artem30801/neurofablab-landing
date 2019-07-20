@@ -1,7 +1,7 @@
 <?php
  $name=$_POST['name'];
  $tel=$_POST['phone'];
- $rs =  mail('avtolet969@gmail.com', 'NCognoLab', 'Имя: '.$name.'Телефон : '.$tel, 'From: info@ncognolab.com');
+ $rs =  mail('avtolet969@gmail.com', 'NCognoLab', 'Имя: '.$name.'Телефон : '.$tel, 'From: fewfinfo@ncognolab.ru');
  if ($rs) {
   $result="Успешно!Мы перезвоним в ближайшее время!";
  }
