@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     M.AutoInit(document.body);
 
-    $('#btn').click(function () {
+    $('#send_btn').click(function () {
 
         var name = $('#icon_prefix').val();
         var phone = $('#icon_telephone').val();
