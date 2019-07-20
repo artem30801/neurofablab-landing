@@ -6,7 +6,7 @@ from sanic import Sanic
 from sanic import response
 
 import telegram
-bot = telegram.Bot(token='TOKEN')  #TODO load
+bot = telegram.Bot(token='')  #TODO load
 
 web_path = "web/"
 assests_path = web_path + "assests/"
