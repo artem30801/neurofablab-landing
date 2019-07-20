@@ -14,10 +14,10 @@ $(document).ready(function () {
             url: "writeback",
             type: "post",
             dataType: "json",
-            data: {
+            data: JSON.stringify({
                 "name": name,
                 "phone": phone
-            },
+            }),
 
             success: function (data) {
                 document.getElementById("icon_prefix").value = "";
