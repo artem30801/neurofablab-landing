@@ -24,6 +24,15 @@ async def reader_page(request):
     return response.html(open(os.path.abspath(web_path+'landing.html'), encoding='utf-8').read())
 
 
+@app.route("/writeback", methods=["POST", ])
+async def writeback(request):
+    print(request.body, request.body.get("name"))
+    print(request.body, request.body.get("phone"))
+
+
+    return response.json({'result': 'Hello world!'})
+
+
 def start():
     ip = '0.0.0.0'
     app.run(host=ip, port=80)

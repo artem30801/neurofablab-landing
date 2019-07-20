@@ -11,7 +11,7 @@ $(document).ready(function () {
         var phone = $('#icon_telephone').val();
 
         $.ajax({
-            url: "action.php",
+            url: "writeback",
             type: "post",
             dataType: "json",
             data: {
