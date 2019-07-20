@@ -6,7 +6,7 @@
   $result="Успешно!Мы перезвоним в ближайшее время!";
  }
  else{
-  $result = $name;
+  $result = $tel;
  }
     echo json_encode(array(
         'result' => $result
