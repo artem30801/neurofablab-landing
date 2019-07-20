@@ -92,3 +92,7 @@
 .collection a.collection-item{
     color: #1E88E5 !important;
 }
+
+body, html {
+    overflow-x:hidden; 
+}
