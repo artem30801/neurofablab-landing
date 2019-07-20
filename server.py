@@ -1,4 +1,6 @@
 import os
+import json
+
 import sanic
 from sanic import Sanic
 from sanic import response
@@ -26,9 +28,8 @@ async def reader_page(request):
 
 @app.route("/writeback", methods=["POST", ])
 async def writeback(request):
-    print(request.body)
-    print(request.args.get("name"), request.args.get("phone"))
-
+    args = json.loads(request.body)
+    print(args.get("name"), args.get("phone"))
 
     return response.json({'result': 'Hello world!'})
 
