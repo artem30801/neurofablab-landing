@@ -6,7 +6,8 @@ from sanic import Sanic
 from sanic import response
 
 import telegram
-bot = telegram.Bot(token='')  #TODO load
+bot = telegram.Bot(token='', request_kwargs={
+    'proxy_url': 'socks5://95.216.224.183:1080/'})  #TODO load
 
 web_path = "web/"
 assests_path = web_path + "assests/"
@@ -34,7 +35,7 @@ async def writeback(request):
     args = json.loads(request.body)
     print(args.get("name"), args.get("phone"))
 
-    result = bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
+    result = await bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
 
     if result:
         return response.json({'result': 'Форма отправлена!'})
