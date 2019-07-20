@@ -1,5 +1,5 @@
 .fullheight {
-    min-height: 100%;
+    min-height: 100% !important;
 }
 
 .side-scroll-nav{
