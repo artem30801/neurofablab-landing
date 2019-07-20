@@ -5,6 +5,9 @@ import sanic
 from sanic import Sanic
 from sanic import response
 
+import telegram
+bot = telegram.Bot(token='TOKEN')  #TODO load
+
 web_path = "web/"
 assests_path = web_path + "assests/"
 
@@ -31,7 +34,13 @@ async def writeback(request):
     args = json.loads(request.body)
     print(args.get("name"), args.get("phone"))
 
-    return response.json({'result': 'Hello world!'})
+    result = bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
+
+    if result:
+        return response.json({'result': 'Форма отправлена!'})
+    else:
+        return response.json({'result': 'На сервере произошла ошибка :('})
+
 
 
 def start():
