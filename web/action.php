@@ -9,7 +9,7 @@
   $result="Успешно!Мы перезвоним в  ближайшее время!";
  }
  else{
-  $result = 'avtolet969@gmail.com'.'NCognoLab'.'Имя: '.$name.'Телефон : '.$tel.'From: info@ncognolab.com';
+  $result = 'no';
  }
     echo json_encode(array(
         'result' => $result
