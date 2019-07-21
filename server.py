@@ -37,7 +37,7 @@ async def writeback(request):
     args = json.loads(request.body)
     print(args.get("name"), args.get("phone"))
 
-    result = await bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
+    result = await bot.bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
 
     if result:
         return response.json({'result': 'Форма отправлена!'})
