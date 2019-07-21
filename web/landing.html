@@ -469,7 +469,6 @@
     <script>
         var vm = new Vue({
             data: {
-                blocked: false,
                 valid: false
             },
 
@@ -477,13 +476,13 @@
                 validate: function () {
                     var elem1 = document.getElementById('icon_prefix')
                     var elem2 = document.getElementById('icon_telephone')
-                    console.log(elem1.checkValidity())
+                    //console.log(elem1.checkValidity())
                     if (elem1.checkValidity() && elem2.checkValidity()) {
                         this.valid = true
                     } else {
                         this.valid = false
                     }
-                    console.log(this.valid)
+                    //console.log(this.valid)
                 }
             }
         })

@@ -1,5 +1,6 @@
 import os
 import json
+import configparser
 
 import sanic
 from sanic import Sanic
@@ -8,9 +9,14 @@ from sanic import response
 import telegram
 from telegram.ext import Updater
 
-bot = Updater(token='', request_kwargs={
-    'proxy_url': 'socks5://95.216.224.183:1080/'})  #TODO load
+config = configparser.ConfigParser()
+config.read("config.ini")
 
+token = config["TELEGRAM"]["token"]
+dialog_id = config["TELEGRAM"]["dialog_id"]
+proxy = config["TELEGRAM"]["proxy"]
+
+bot = Updater(token=token, request_kwargs={'proxy_url': proxy})
 web_path = "web/"
 assests_path = web_path + "assests/"
 
@@ -38,16 +44,17 @@ async def writeback(request):
         args = json.loads(request.body)
         name, phone = args.get("name"), args.get("phone")
 
-        msg = "Новый запрос по форме обратной связи!\nИмя: '{}', телефон: {}\nIP-адресс отправителя: {}".format(
+        msg = "Новый запрос по форме обратной связи!\nИмя: '{}'; Телефон: {}\nIP-адресс отправителя: {}".format(
             name, phone, request.ip
         )
-        result = bot.bot.send_message(chat_id="-356071675", text=msg)  #TODO config
+        result = bot.bot.send_message(chat_id=dialog_id, text=msg)
 
     except Exception as e:
-        return response.json({'result': 'На сервере произошла ошибка {} :('.format(e)})
+        return response.json({'result': 'На сервере произошла ошибка {} :(\n'
+                                        'Пожалуйста, сообщите нам об этом!'.format(e)})
     else:
         if result:
-            return response.json({'result': 'Скоро с Вами свяжутся!'})
+            return response.json({'result': 'Мы перезвоним Вам в ближайшее время!'})
         else:
             return response.json({'result': 'Не удалось отправить данные :('})
 
