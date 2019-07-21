@@ -9,6 +9,8 @@ from sanic import response
 import telegram
 from telegram.ext import Updater
 
+import sql_interact
+
 config = configparser.ConfigParser()
 config.read("config.ini")
 
@@ -27,7 +29,6 @@ app.static('/assests', assests_path)
 app.static('/style.css', web_path+"style.css", name='css')
 app.static('/script.js',  web_path+"script.js", name='js')
 app.static('/robots.txt',  web_path+"robots.txt", name='robots')
-
 
 
 @app.route("/")
@@ -49,6 +50,9 @@ async def writeback(request):
         msg = "Новый запрос по форме обратной связи!\nИмя: '{}'; Телефон: {}\nIP-адресс отправителя: {}".format(
             name, phone, request.ip
         )
+
+        sql_interact.insert_writeback(name, phone)
+
         result = bot.bot.send_message(chat_id=dialog_id, text=msg)
 
     except Exception as e:
@@ -59,8 +63,6 @@ async def writeback(request):
             return response.json({'result': 'Мы перезвоним Вам в ближайшее время!'})
         else:
             return response.json({'result': 'Не удалось отправить данные :('})
-
-
 
 
 def start():

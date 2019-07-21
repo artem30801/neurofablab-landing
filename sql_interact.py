@@ -2,7 +2,7 @@ from mysql.connector import MySQLConnection, Error
 from sql_config import read_db_config
 
 
-def insert_book(name, phone):
+def insert_writeback(name, phone):
     if ';' in name + phone:
         return 1
 
@@ -29,4 +29,4 @@ def insert_book(name, phone):
 
 
 if __name__ == '__main__':
-    insert_book('test_name', '+1234567890')
+    insert_writeback('test_name', '+1234567890')
