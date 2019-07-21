@@ -34,15 +34,23 @@ async def reader_page(request):
 
 @app.route("/writeback", methods=["POST", ])
 async def writeback(request):
-    args = json.loads(request.body)
-    print(args.get("name"), args.get("phone"))
+    try:
+        args = json.loads(request.body)
+        name, phone = args.get("name"), args.get("phone")
 
-    result = await bot.bot.send_message(chat_id="-356071675", text="testmsgm")  #TODO config
+        msg = "Новый запрос по форме обратной связи! \n  Имя: {}, телефон: {} \n IP-адресс отправителя: {}".format(
+            name, phone, request.ip
+        )
+        result = bot.bot.send_message(chat_id="-356071675", text=msg)  #TODO config
 
-    if result:
-        return response.json({'result': 'Форма отправлена!'})
+    except Exception as e:
+        return response.json({'result': 'На сервере произошла ошибка {} :('.format(e)})
     else:
-        return response.json({'result': 'На сервере произошла ошибка :('})
+        if result:
+            return response.json({'result': 'Скоро с Вами свяжутся!'})
+        else:
+            return response.json({'result': 'Не удалось отправить данные :('})
+
 
 
 
