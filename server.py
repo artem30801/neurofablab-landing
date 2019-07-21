@@ -6,7 +6,9 @@ from sanic import Sanic
 from sanic import response
 
 import telegram
-bot = telegram.Bot(token='', request_kwargs={
+from telegram.ext import Updater
+
+bot = Updater(token='', request_kwargs={
     'proxy_url': 'socks5://95.216.224.183:1080/'})  #TODO load
 
 web_path = "web/"
