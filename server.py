@@ -24,12 +24,12 @@ app.static('/script.js',  web_path+"script.js", name='js')
 
 @app.route("/")
 async def index(request):
-    return response.redirect('/landing')
+    return response.html(open(os.path.abspath(web_path+'landing.html'), encoding='utf-8').read())
 
 
 @app.route("/landing")
 async def reader_page(request):
-    return response.html(open(os.path.abspath(web_path+'landing.html'), encoding='utf-8').read())
+    return response.redirect('/')
 
 
 @app.route("/writeback", methods=["POST", ])
@@ -38,7 +38,7 @@ async def writeback(request):
         args = json.loads(request.body)
         name, phone = args.get("name"), args.get("phone")
 
-        msg = "Новый запрос по форме обратной связи! \n  Имя: {}, телефон: {} \n IP-адресс отправителя: {}".format(
+        msg = "Новый запрос по форме обратной связи!\nИмя: '{}', телефон: {}\nIP-адресс отправителя: {}".format(
             name, phone, request.ip
         )
         result = bot.bot.send_message(chat_id="-356071675", text=msg)  #TODO config

@@ -5,7 +5,8 @@ $(document).ready(function () {
 
     M.AutoInit(document.body);
 
-    $('#send_btn').click(function () {
+    $(document).on('submit', '#writeback_form', function(event) {
+        event.preventDefault();
 
         var name = $('#icon_prefix').val();
         var phone = $('#icon_telephone').val();

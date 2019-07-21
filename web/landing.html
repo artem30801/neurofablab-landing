@@ -361,12 +361,14 @@
                 <div class="col s12 m10 offset-m1 l10 offset-l1">
                     <div class="card-panel" data-aos="fade-right" data-aos-delay="200">
                         <h5 align="center">Свяжитесь через форму!</h5>
-                        <div id="callback_form">
+                        <form id="writeback_form">
                             <div class="row">
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required ref="icon_prefix" @change="validate">
+                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required ref="icon_prefix"
+                                        @change="validate">
                                     <label for="icon_prefix">Ваше имя</label>
+                                    <span class="helper-text" data-error="Это обязательное поле!"></span>
                                 </div>
 
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
@@ -378,13 +380,14 @@
                                 </div>
 
                                 <div class="col s8 offset-s2 m6 offset-m3 l4 center-align">
-                                    <button class="btn waves-effect waves-light light-blue btn-large" id='send_btn' name="action"> <!-- v-bind:class="{ disabled: !valid }" :disabled="!valid" -->
+                                    <button class="btn waves-effect waves-light light-blue btn-large" id='send_btn' name="action" type="submit" v-bind:class="{ disabled: !valid }">
+                                        <!-- v-bind:class="{ disabled: !valid }" :disabled="!valid" -->
                                         Отправить
                                         <i class="material-icons right">send</i>
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </form>
 
                     </div>
                 </div>
@@ -467,22 +470,20 @@
         var vm = new Vue({
             data: {
                 blocked: false,
-                telephone: null,
                 valid: false
             },
-            computed: {},
+
             methods: {
-                validate: () => {
+                validate: function () {
                     var elem1 = document.getElementById('icon_prefix')
                     var elem2 = document.getElementById('icon_telephone')
-                    console.log(elem1.classList)
-                    console.log(elem1.classList.contains('valid'))
-                    if (elem1.classList.contains('valid')) {
-                        this.valid = false
-                    } else {
+                    console.log(elem1.checkValidity())
+                    if (elem1.checkValidity() && elem2.checkValidity()) {
                         this.valid = true
+                    } else {
+                        this.valid = false
                     }
-                    //console.log(this.valid)
+                    console.log(this.valid)
                 }
             }
         })
