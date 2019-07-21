@@ -6,7 +6,7 @@ def insert_book(name, phone):
     if ';' in name + phone:
         return 1
 
-    query = "INSERT INTO quotes(name, phone) " + "VALUES(%s, %s)"
+    query = "INSERT INTO writeback(name, phone) " + "VALUES(%s, %s)"
     args = (name, phone)
 
     try:
