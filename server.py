@@ -30,6 +30,7 @@ app.static('/assests', assests_path)
 app.static('/style.css', web_path+"style.css", name='css')
 app.static('/script.js',  web_path+"script.js", name='js')
 app.static('/robots.txt',  web_path+"robots.txt", name='robots')
+app.static('/favicon.ico',  assests_path+"favicon.png", name='favicon')
 
 
 @app.route("/")
