@@ -46,7 +46,7 @@ async def reader_page(request):
 async def writeback(request):
     try:
         args = json.loads(request.body)
-        name, phone = args.get("name"), str(args.get("phone"))
+        name, phone = args.get("name", ""), str(args.get("phone", ""))
 
         if not all((valid_size(name, 120), valid_phonelike(phone))):
             return response.json({'result': 'Переданные серверу данные неверны!'})
