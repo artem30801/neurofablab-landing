@@ -2,6 +2,8 @@ $(document).ready(function () {
     $('.scrollspy').scrollSpy({
         scrollOffset: 0,
     });
+        
+    $('input#icon_telephone').characterCounter();
 
     M.AutoInit(document.body);
 

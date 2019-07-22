@@ -25,7 +25,7 @@
     <nav>
         <div class="nav-wrapper blue darken-4">
             <a class="brand-logo center" style="height: 100%;">
-                <img align="center" src="assests/logo.png"  style="height: 100%; padding: 8px">
+                <img align="center" src="assests/logo.png" style="height: 100%; padding: 8px">
             </a>
 
             <a href="#" data-target="mobile-menu" class="sidenav-trigger">
@@ -97,7 +97,7 @@
             data-aos="fade">
             <div class="container">
                 <div class="row">
-                    <div class="col s12 m10 offset-m1 l10 offset-l1">
+                    <div class="col s12 m10 offset-m1 l10 offset-l1 xl8 offset-xl2">
                         <div class="card blue darken-4">
                             <div class="card-content white-text">
                                 <h1 style="margin-top: 0; font-size: 300%!important" class="hide-on-med-and-up	">NCOGNO LAB</h1>
@@ -118,14 +118,14 @@
 
         <div class="divider"></div>
 
-        <div id="about" class="section scrollspy no-autoinit fullheight grey lighten-4">
+        <div id="about" class="section scrollspy no-autoinit fullheight grey lighten-4 valign-wrapper">
             <div class="container">
                 <div class="section">
                     <div class="row">
                         <h3 align="center" data-aos="fade">О нас</h3>
                     </div>
                     <div class="row">
-                        <div class="col s12 m12 l12">
+                        <div class="col s12 m12 l12 xl10 offset-xl1">
                             <div class="card-panel z-depth-3" data-aos="fade" data-aos-delay="200">
                                 <p class="flow-text" data-aos="fade-left" data-aos-delay="300" data-aos-offset="50">
                                     Развитие и внедрение технологий основанных на когнитивной и нейронауке является одной из важнейших задач стоящих перед научными
@@ -160,8 +160,8 @@
 
                     <div class="row d-flex">
                         <div class="col s12 m5 l5 d-flex">
-                            <div class="card-panel d-flex adaptive-img flex-img waves-effect waves-light" style="background-image: url(assests/scholars.jpg);"
-                                data-aos="fade-right" data-aos-delay="200">
+                            <div class="card-panel d-flex adaptive-img flex-img waves-effect waves-light" style="background-image: url(assests/scholars.jpg);" data-aos="fade-right"
+                                data-aos-delay="200">
 
                             </div>
                         </div>
@@ -242,7 +242,7 @@
 
         <div class="divider"></div>
 
-        <div id="partners" class="section scrollspy no-autoinit fullheight grey lighten-4">
+        <div id="partners" class="section scrollspy no-autoinit fullheight grey lighten-4 valign-wrapper">
             <div class='container' align="center">
                 <div class="row">
                     <h3>Наши партнёры:</h3>
@@ -370,7 +370,7 @@
                             <div class="row no-margin">
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
                                     <i class="material-icons prefix">account_circle</i>
-                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required ref="icon_prefix" @change="validate">
+                                    <input id="icon_prefix" type="text" name="name" class="validate" placeholder="Имя" required @change="validate">
                                     <label for="icon_prefix">Ваше имя</label>
                                     <span class="helper-text" data-error="Это обязательное поле!"></span>
                                 </div>
@@ -378,7 +378,7 @@
                                 <div class="input-field col s12 m6 l4" style="margin-bottom: 20">
                                     <i class="material-icons prefix">phone</i>
                                     <input id="icon_telephone" type="tel" class="validate" pattern="[+]{1,1}[7]{1,1}[0-9]{10,10}" placeholder="+7XXXXXXXXXX"
-                                        name='tel' required ref="icon_telephone" @change="validate">
+                                        name='tel' required @change="validate" data-length="12">
                                     <label for="icon_telephone">Ваш телефон</label>
                                     <span class="helper-text" data-error="Формат : +7XXXXXXXXXX"></span>
                                 </div>
@@ -443,7 +443,6 @@
                     </div>
                     <div class="col m4 offset-m2 s12">
                         <span class="grey-text text-lighten-2"> Page by
-
                             <a href="https://vk.com/artem30801" class="grey-text text-lighten-4"> Васюник Артём </a>
                             and
                             <a href="https://vk.com/timazai2017" class="grey-text text-lighten-4">Тимофей Зайцев</a>.
@@ -454,15 +453,15 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
 
     <script src="https://kit.fontawesome.com/3c4d5dd29c.js"></script>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="script.js"></script>
@@ -494,7 +493,7 @@
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
             (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+                m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
                 m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
             })
             (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");

@@ -72,6 +72,13 @@
     color: #1E88E5;
 }
 
+.input-field {
+    margin-bottom: 0px;
+}
+
+.waves-effect.waves-blue .waves-ripple {
+    background-color: rgba(30, 136, 229, 0.65);
+}
 
 .table-of-contents a.active {
     border-left: 3px solid#1E88E5 !important;
@@ -95,6 +102,26 @@
 
 .collection a.collection-item{
     color: #1E88E5 !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #64b5f6 !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #1E88E5 !important;
+}
+
+input[type=checkbox]:checked+.lever:after {
+    background-color: #1E88E5 !important;
+}
+
+.switch label .lever:before {
+    background-color: rgba(30, 136, 229, 0.15) !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #1E88E5 !important;
 }
 
 main {
